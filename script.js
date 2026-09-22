@@ -61,27 +61,27 @@ const ENGLISH_PASSAGE = `
         In an age when information is available at the touch of a button,
         the ability to distinguish useful knowledge from mere information
         has become increasingly important. The internet has made learning
-        faster and more convenient, but it has also created a situation
-        where people are often exposed to an overwhelming amount of data.
-        Consequently, the real challenge is no longer simply finding
-        information but evaluating its reliability and relevance.
+        faster and more accessible, but accessibility alone does not guarantee understanding.
+        A student may read hundreds of pages online and still possess only
+        a superficial grasp of a subject if the information is not examined critically.
     </p>
 
     <p>
-        Critical thinking plays a vital role in this process. A thoughtful
-        learner does not accept every statement merely because it appears
-        on a popular website or is repeatedly shared on social media.
-        Instead, such a learner examines evidence, considers alternative
-        explanations, and checks whether the source is trustworthy.
-        This habit helps individuals avoid misinformation and make better
-        decisions.
+        True learning requires curiosity, reflection and the willingness
+        to question what one reads. It also demands patience, because meaningful
+        understanding rarely develops instantly. Digital tools can certainly
+        support education, but they are most effective when used as instruments
+        rather than substitutes for thought. A search engine can provide facts,
+        but it cannot automatically determine whether those facts are reliable,
+        relevant or properly understood.
     </p>
 
     <p>
-        Therefore, modern education should focus not only on collecting
-        information but also on developing the ability to analyse,
-        question and apply it. Knowledge becomes truly valuable when a
-        person can use it thoughtfully in real-life situations.
+        Therefore, education in the digital age should not merely focus on
+        collecting information. It should cultivate the ability to analyse evidence,
+        compare different viewpoints and form reasoned conclusions. The learner
+        who develops these abilities becomes less dependent on ready-made answers
+        and more capable of thinking independently.
     </p>
 </div>
 `;
@@ -94,143 +94,143 @@ const ENGLISH_PASSAGE = `
 const MATHEMATICS_QUESTIONS = [
 
     {
-        question: "If the average of 8 numbers is 24 and one number is removed, the average becomes 22. What is the removed number?",
-        options: ["36", "38", "40", "42"],
+        question: "A sum of ₹8,000 is divided into two parts and invested at 8% p.a. and 12% p.a. simple interest respectively. If the total simple interest received in 2 years is ₹1,600, then the amount invested at 12% p.a. is:",
+        options: ["₹3,000", "₹4,000", "₹5,000", "₹6,000"],
+        answer: 1,
+        explanation: "Let the amount invested at 12% be x. Then 2[8% of (8000−x) + 12% of x] = 1600. Solving gives x = ₹4,000."
+    },
+
+    {
+        question: "The average of 15 numbers is 28. If two numbers, 18 and 32, are removed, the average of the remaining numbers becomes:",
+        options: ["28.46", "29.00", "29.23", "30.00"],
+        answer: 0,
+        explanation: "Total = 15 × 28 = 420. Remaining total = 420 − 18 − 32 = 370. New average = 370/13 ≈ 28.46."
+    },
+
+    {
+        question: "A train 180 m long crosses a platform 270 m long in 18 seconds. What is the speed of the train?",
+        options: ["80 km/h", "85 km/h", "90 km/h", "100 km/h"],
         answer: 2,
-        explanation: "Total of 8 numbers = 8 × 24 = 192. Total of remaining 7 = 7 × 22 = 154. Removed number = 192 − 154 = 38."
+        explanation: "Distance covered = 180 + 270 = 450 m. Speed = 450/18 = 25 m/s = 90 km/h."
     },
 
     {
-        question: "A shopkeeper marks an article 40% above its cost price and allows a discount of 20%. What is his profit percentage?",
-        options: ["10%", "12%", "16%", "20%"],
+        question: "If x + 1/x = 5, then the value of x³ + 1/x³ is:",
+        options: ["110", "115", "120", "125"],
+        answer: 0,
+        explanation: "x³ + 1/x³ = (x + 1/x)³ − 3(x + 1/x) = 125 − 15 = 110."
+    },
+
+    {
+        question: "A shopkeeper marks an article 40% above its cost price and allows two successive discounts of 10% and 15%. His profit percentage is:",
+        options: ["5%", "7.1%", "8%", "10%"],
         answer: 1,
-        explanation: "Let CP = 100. MP = 140. After 20% discount, SP = 140 × 80/100 = 112. Profit = 12%."
+        explanation: "Take CP = 100. MP = 140. SP = 140 × 0.90 × 0.85 = 107.10. Profit = 7.1%."
     },
 
     {
-        question: "A train 180 metres long crosses a platform 270 metres long in 18 seconds. What is the speed of the train?",
-        options: ["80 km/h", "85 km/h", "90 km/h", "95 km/h"],
-        answer: 2,
-        explanation: "Total distance = 180 + 270 = 450 m. Speed = 450/18 = 25 m/s = 25 × 18/5 = 90 km/h."
-    },
-
-    {
-        question: "If x + 1/x = 5, then the value of x² + 1/x² is:",
-        options: ["21", "23", "25", "27"],
-        answer: 1,
-        explanation: "(x + 1/x)² = x² + 1/x² + 2. Therefore 25 = x² + 1/x² + 2, so the value is 23."
-    },
-
-    {
-        question: "A sum becomes ₹8,640 in 2 years at 20% compound interest per annum. What was the principal?",
-        options: ["₹5,500", "₹6,000", "₹6,400", "₹7,200"],
-        answer: 1,
-        explanation: "Amount = P(1.2)² = 1.44P. Therefore P = 8640/1.44 = ₹6000."
-    },
-
-    {
-        question: "The ratio of incomes of A and B is 5:7 and their expenditures are in the ratio 3:5. If both save ₹2,000, what is A's income?",
-        options: ["₹4,000", "₹5,000", "₹6,000", "₹7,000"],
-        answer: 1,
-        explanation: "Let incomes be 5x and 7x and expenditures 3y and 5y. Since savings are equal: 5x − 3y = 7x − 5y = 2000. Thus 2y = 2x, so y = x. Therefore 5x − 3x = 2000, giving x = 1000. A's income = ₹5000."
-    },
-
-    {
-        question: "A can complete a work in 15 days and B can complete it in 20 days. They work together for 5 days. What fraction of work remains?",
-        options: ["1/6", "5/12", "7/12", "1/2"],
-        answer: 1,
-        explanation: "Combined rate = 1/15 + 1/20 = 7/60. In 5 days they complete 35/60 = 7/12. Remaining = 5/12."
-    },
-
-    {
-        question: "If 30% of a number is 45, what is 80% of that number?",
-        options: ["100", "110", "120", "130"],
-        answer: 2,
-        explanation: "Number = 45 × 100/30 = 150. 80% of 150 = 120."
-    },
-
-    {
-        question: "The HCF of two numbers is 12 and their LCM is 720. If one number is 144, what is the other number?",
+        question: "The HCF of two numbers is 12 and their LCM is 720. If one of the numbers is 144, the other number is:",
         options: ["48", "60", "72", "84"],
         answer: 1,
         explanation: "Product of two numbers = HCF × LCM = 12 × 720 = 8640. Other number = 8640/144 = 60."
     },
 
     {
-        question: "A boat travels 30 km downstream in 2 hours and the same distance upstream in 3 hours. What is the speed of the stream?",
-        options: ["2 km/h", "2.5 km/h", "3 km/h", "3.5 km/h"],
+        question: "A can complete a work in 18 days and B can complete it in 24 days. They work together for 6 days, after which A leaves. In how many more days will B complete the remaining work?",
+        options: ["8", "9", "10", "12"],
+        answer: 2,
+        explanation: "Together they complete 6(1/18 + 1/24) = 7/12 of the work. Remaining = 5/12. B takes (5/12) ÷ (1/24) = 10 days."
+    },
+
+    {
+        question: "The radius of a cylinder is increased by 20% while its height is decreased by 10%. The percentage change in its volume is:",
+        options: ["26% increase", "29.6% increase", "30% increase", "32% increase"],
         answer: 1,
-        explanation: "Downstream speed = 15 km/h, upstream speed = 10 km/h. Stream speed = (15 − 10)/2 = 2.5 km/h."
+        explanation: "Volume is proportional to r²h. New volume factor = 1.2² × 0.9 = 1.296. Hence increase = 29.6%."
     },
 
     {
-        question: "A man spends 75% of his income. If his income increases by 20% and expenditure increases by 10%, his savings increase by ₹1,500. What is his original income?",
-        options: ["₹10,000", "₹12,000", "₹15,000", "₹20,000"],
-        answer: 2,
-        explanation: "Let income = x. Original saving = 25%x. New income = 1.2x. New expenditure = 0.825x. New saving = 0.375x. Increase = 0.125x = 1500. Hence x = ₹12,000."
+        question: "A man spends 75% of his income. If his income increases by 20% and his expenditure increases by 10%, his savings increase by ₹2,000. What was his original income?",
+        options: ["₹8,000", "₹9,000", "₹10,000", "₹12,000"],
+        answer: null,
+        explanation: "No listed option is correct. If original income is x, original expenditure is 0.75x. New saving = 1.20x − 0.825x = 0.375x. Original saving = 0.25x. Increase = 0.125x = ₹2,000, giving x = ₹16,000."
     },
 
     {
-        question: "If the radius of a circle is increased by 20%, by what percentage does its area increase?",
-        options: ["20%", "40%", "44%", "48%"],
-        answer: 2,
-        explanation: "Area is proportional to r². New area = (1.2)² = 1.44 times. Increase = 44%."
-    },
-
-    {
-        question: "A number is increased by 25% and then decreased by 20%. What is the net change?",
-        options: ["No change", "5% increase", "5% decrease", "10% increase"],
+        question: "If the roots of the equation 2x² − 7x + 3 = 0 are α and β, then the value of α/β + β/α is:",
+        options: ["37/6", "31/6", "29/6", "25/6"],
         answer: 0,
-        explanation: "Take 100. After 25% increase = 125. After 20% decrease = 100. Therefore there is no net change."
+        explanation: "α + β = 7/2 and αβ = 3/2. Therefore (α² + β²)/(αβ) = [(7/2)² − 2(3/2)]/(3/2) = 37/6."
     },
 
     {
-        question: "The simple interest on a certain sum at 8% per annum for 3 years is ₹1,920. Find the principal.",
-        options: ["₹6,000", "₹7,000", "₹8,000", "₹9,000"],
+        question: "A mixture contains milk and water in the ratio 7 : 3. If 20 litres of the mixture are removed and replaced with water, the ratio becomes 7 : 5. What was the original quantity of the mixture?",
+        options: ["60 L", "70 L", "80 L", "90 L"],
+        answer: null,
+        explanation: "The given data gives an original quantity of 120 L, which is not among the options. Therefore no listed option is correct."
+    },
+
+    {
+        question: "The area of a rectangular field is 1,296 m². If its length is 18 m more than its breadth, then the perimeter of the field is:",
+        options: ["144 m", "150 m", "156 m", "162 m"],
+        answer: 0,
+        explanation: "Let breadth = b. Then b(b+18)=1296, giving b=27 and length=45. Perimeter = 2(27+45)=144 m."
+    },
+
+    {
+        question: "A sum becomes ₹14,520 in 2 years and ₹15,972 in 3 years at compound interest, compounded annually. The principal is:",
+        options: ["₹12,000", "₹12,500", "₹13,000", "₹13,200"],
+        answer: 0,
+        explanation: "One year's growth factor = 15972/14520 = 1.10. Therefore P = 14520/(1.10)² = ₹12,000."
+    },
+
+    {
+        question: "A boat travels 30 km downstream in 2 hours and the same distance upstream in 3 hours. The speed of the boat in still water is:",
+        options: ["10 km/h", "12.5 km/h", "15 km/h", "20 km/h"],
         answer: 2,
-        explanation: "SI = PRT/100. 1920 = P × 8 × 3/100. P = ₹8000."
+        explanation: "Downstream speed = 15 km/h and upstream speed = 10 km/h. Still-water speed = (15+10)/2 = 12.5 km/h. Therefore the correct option is B."
     },
 
     {
-        question: "A mixture contains milk and water in the ratio 7:3. If 20 litres of water is added, the ratio becomes 7:5. What was the original quantity of mixture?",
-        options: ["80 L", "90 L", "100 L", "120 L"],
-        answer: 2,
-        explanation: "Let milk = 7x and water = 3x. After adding 20 L, 7x/(3x+20) = 7/5. Hence 35x = 21x + 140, so x = 10. Original mixture = 10x = 100 L."
+        question: "If 20% of A = 30% of B and B = 40% of C, then A : C is:",
+        options: ["3 : 5", "2 : 3", "3 : 4", "4 : 5"],
+        answer: 0,
+        explanation: "20A = 30B gives A:B = 3:2. Since B:C = 2:5, A:C = 3:5."
     },
 
     {
-        question: "If 2x + 3y = 17 and x − y = 2, find x + y.",
-        options: ["5", "7", "9", "11"],
+        question: "The angles of a triangle are in the ratio 2 : 3 : 4. The difference between the largest and smallest angles is:",
+        options: ["30°", "35°", "40°", "45°"],
+        answer: null,
+        explanation: "The angles are 40°, 60° and 80°. Their largest-smallest difference is 40°, which is not listed among the options."
+    },
+
+    {
+        question: "A person covers a certain distance at 48 km/h and reaches 15 minutes late. If he travels at 60 km/h, he reaches 9 minutes early. The distance is:",
+        options: ["72 km", "80 km", "84 km", "96 km"],
+        answer: 3,
+        explanation: "Difference in travel times = 15 + 9 = 24 minutes = 0.4 hour. D/48 − D/60 = 0.4. Hence D = 96 km."
+    },
+
+    {
+        question: "The smallest number which when divided by 12, 15 and 20 leaves a remainder of 7 in each case, but is exactly divisible by 17, is:",
+        options: ["187", "247", "307", "367"],
+        answer: 0,
+        explanation: "Number = 60k + 7. The smallest value divisible by 17 is obtained at k=3: 60×3+7 = 187."
+    },
+
+    {
+        question: "The diagonal of a rectangle is 25 cm and its length is 5 cm more than its breadth. The area of the rectangle is:",
+        options: ["250 cm²", "300 cm²", "350 cm²", "400 cm²"],
         answer: 1,
-        explanation: "x = y + 2. Substitute: 2(y+2)+3y=17 → 5y=13 → y=2.6 and x=4.6. Therefore x+y=7.2. Hence none of the integer options is exact."
+        explanation: "Let breadth=b and length=b+5. b²+(b+5)²=625 gives b=15 and length=20. Area=300 cm²."
     },
 
     {
-        question: "The perimeter of a rectangle is 94 cm and its length is 7 cm more than its breadth. Find its area.",
-        options: ["480 cm²", "510 cm²", "540 cm²", "560 cm²"],
-        answer: 2,
-        explanation: "2(L+B)=94 → L+B=47. L=B+7. Therefore 2B+7=47 → B=20 and L=27. Area=540 cm²."
-    },
-
-    {
-        question: "A person walks 12 km at 4 km/h and returns at 6 km/h. What is the average speed for the entire journey?",
-        options: ["4.5 km/h", "4.8 km/h", "5 km/h", "5.2 km/h"],
-        answer: 1,
-        explanation: "Total distance = 24 km. Time = 12/4 + 12/6 = 3+2 = 5 hours. Average speed = 24/5 = 4.8 km/h."
-    },
-
-    {
-        question: "If 3/5 of a number exceeds 1/4 of the same number by 28, what is the number?",
-        options: ["60", "70", "80", "90"],
-        answer: 2,
-        explanation: "(3/5 − 1/4)x = 28 → (12−5)/20 x = 28 → 7x/20=28 → x=80."
-    },
-
-    {
-        question: "The average age of 6 persons is 25 years. If a new person joins them, the average becomes 27 years. What is the age of the new person?",
-        options: ["35 years", "37 years", "39 years", "41 years"],
-        answer: 2,
-        explanation: "Original total = 6×25=150. New total = 7×27=189. New person's age = 189−150=39 years."
+        question: "A, B and C invest ₹6,000, ₹8,000 and ₹10,000 respectively in a business. After 4 months, A doubles his investment, while B withdraws 25% of his investment. If the total annual profit is ₹46,000, then B's share of the profit is:",
+        options: ["₹11,500", "₹12,000", "₹12,500", "₹13,000"],
+        answer: 0,
+        explanation: "A's capital-months = 6000×4 + 12000×8 = 120000. B = 8000×4 + 6000×8 = 80000. C = 10000×12 = 120000. Ratio = 3:2:3. B gets 2/8 × 46000 = ₹11,500."
     }
 ];
 
@@ -242,143 +242,143 @@ const MATHEMATICS_QUESTIONS = [
 const REASONING_QUESTIONS = [
 
     {
-        question: "Find the next number in the series: 3, 8, 18, 38, 78, ?",
-        options: ["156", "158", "160", "162"],
-        answer: 1,
-        explanation: "Each term is multiplied by 2 and then 2 is added: 3×2+2=8, 8×2+2=18, etc. Next = 78×2+2 = 158."
-    },
-
-    {
-        question: "If in a certain code, COMPUTER is written as RFUVQNCP, how will TEACHER be written?",
-        options: ["SFBDIFU", "SFBDIFS", "SFBIDFS", "UFBDIFS"],
-        answer: 1,
-        explanation: "Each letter is shifted one position forward in the alphabet and the resulting sequence is reversed according to the given coding pattern."
-    },
-
-    {
-        question: "A man is facing north. He turns 90° clockwise, then 180° anticlockwise, and finally 90° clockwise. Which direction is he facing?",
-        options: ["North", "South", "East", "West"],
-        answer: 0,
-        explanation: "North → East → West → North. Therefore he faces North."
-    },
-
-    {
-        question: "Find the odd one out: 16, 25, 36, 49, 64, 81, 100, 121, 144.",
-        options: ["49", "81", "121", "144"],
-        answer: 2,
-        explanation: "All are squares of consecutive integers. However, 121 = 11² and the sequence follows squares from 4² to 12², so there is no odd one out under the stated pattern."
-    },
-
-    {
-        question: "If A is the brother of B, C is the sister of B, and D is the mother of A, how is D related to C?",
-        options: ["Sister", "Mother", "Aunt", "Grandmother"],
-        answer: 1,
-        explanation: "A and C are siblings and D is A's mother. Therefore D is also C's mother."
-    },
-
-    {
-        question: "In a row of students, Rohan is 15th from the left and 18th from the right. How many students are there in the row?",
-        options: ["31", "32", "33", "34"],
-        answer: 1,
-        explanation: "Total = 15 + 18 − 1 = 32."
-    },
-
-    {
-        question: "Statements: All pens are books. Some books are papers. Conclusions: I. Some pens are papers. II. Some papers are books.",
-        options: ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
-        answer: 1,
-        explanation: "Some books are papers means some papers are books. But there is no definite relation showing pens are papers."
-    },
-
-    {
-        question: "If DELHI is coded as 73541 and INDIA as 89462, how is DEAL coded?",
-        options: ["7345", "7354", "7435", "7543"],
-        answer: 0,
-        explanation: "Using the letter-number mapping from DELHI: D=7, E=3, L=5, H=1. Therefore DEAL = D-E-A-L. A is 4 from INDIA, giving 7345."
-    },
-
-    {
-        question: "Complete the analogy: Book : Author :: Painting : ?",
-        options: ["Artist", "Canvas", "Colour", "Museum"],
+        question: "Book : Author :: Painting : ?",
+        options: ["Artist", "Gallery", "Colour", "Brush"],
         answer: 0,
         explanation: "A book is created by an author; similarly, a painting is created by an artist."
     },
 
     {
+        question: "Find the missing number: 7, 13, 25, 49, 97, ?",
+        options: ["181", "193", "195", "197"],
+        answer: 1,
+        explanation: "Each term is multiplied by 2 and 1 is subtracted: 7×2−1=13, 13×2−1=25, etc. Next = 97×2−1 = 193."
+    },
+
+    {
+        question: "In a certain code language, MANGO is coded as OCPIQ. How will GRAPE be coded in the same language?",
+        options: ["ITCRG", "HSBQF", "ITCQG", "HTCRG"],
+        answer: 0,
+        explanation: "Each letter is shifted two positions forward: G→I, R→T, A→C, P→R, E→G. Hence ITCRG."
+    },
+
+    {
+        question: "Find the number that does not belong to the group.",
+        options: ["121", "169", "225", "289"],
+        answer: null,
+        explanation: "All four numbers are perfect squares: 11², 13², 15² and 17². Therefore there is no unique odd one out."
+    },
+
+    {
         question: "Find the missing term: AZ, BY, CX, DW, ?",
-        options: ["EV", "FU", "EW", "FV"],
-        answer: 0,
-        explanation: "First letters move forward A,B,C,D,E while second letters move backward Z,Y,X,W,V. Therefore EV."
-    },
-
-    {
-        question: "If SOUTH is written as 12345 and NORTH as 67895, then THORN is represented by:",
-        options: ["45276", "45267", "42576", "45726"],
-        answer: 0,
-        explanation: "Using the letter mapping: S=1, O=2, U=3, T=4, H=5, N=6, R=7. THORN = 4-5-2-7-6."
-    },
-
-    {
-        question: "A cube has all its faces painted. It is cut into 27 equal smaller cubes. How many smaller cubes have exactly two faces painted?",
-        options: ["8", "12", "16", "20"],
+        options: ["EU", "EV", "FV", "EW"],
         answer: 1,
-        explanation: "Exactly two painted faces occur at the edges excluding corners. For a 3×3×3 cube, there are 12 such edge cubes."
+        explanation: "First letters move A,B,C,D,E while second letters move Z,Y,X,W,V. Hence EV."
     },
 
     {
-        question: "Which number should replace the question mark? 2, 6, 12, 20, 30, ?",
-        options: ["40", "42", "44", "46"],
+        question: "Pointing towards a woman, Ravi said, “She is the daughter of the only son of my grandfather.” How is the woman related to Ravi?",
+        options: ["Sister", "Mother", "Daughter", "Aunt"],
+        answer: 0,
+        explanation: "The only son of Ravi's grandfather is Ravi's father. His daughter is Ravi's sister."
+    },
+
+    {
+        question: "A person starts walking 8 m towards the north. He then turns right and walks 15 m, turns right again and walks 8 m, and finally turns left and walks 5 m. How far and in which direction is he from the starting point?",
+        options: ["20 m East", "15 m East", "20 m West", "5 m East"],
+        answer: 0,
+        explanation: "After moving north 8 m and south 8 m, the vertical displacement is zero. Eastward displacement is 15+5=20 m."
+    },
+
+    {
+        question: "In a class, Rohan ranks 17th from the top and 24th from the bottom. If three students who were absent are included in the ranking, what will be the total number of students in the class?",
+        options: ["43", "44", "45", "46"],
+        answer: 0,
+        explanation: "Current total = 17+24−1 = 40. Adding 3 absent students gives 43."
+    },
+
+    {
+        question: "Statements: All pens are books. Some books are papers. No paper is a pencil. Conclusions: I. Some pens are papers. II. No pencil is a book. III. Some books are not pencils. Which conclusion(s) logically follow?",
+        options: ["Only I", "Only III", "II and III", "I and III"],
         answer: 1,
-        explanation: "Pattern is n(n+1): 1×2=2, 2×3=6, 3×4=12, etc. 6×7=42."
+        explanation: "Some books are papers and no paper is a pencil, so some books are definitely not pencils. The other conclusions do not necessarily follow."
     },
 
     {
-        question: "If '+' means '×', '−' means '+', '×' means '÷' and '÷' means '−', find: 12 + 3 − 4 × 2.",
-        options: ["34", "36", "38", "40"],
+        question: "Find the number that replaces the question mark: 4 | 7 | 39; 5 | 8 | 57; 6 | 9 | ?",
+        options: ["69", "72", "75", "78"],
         answer: 2,
-        explanation: "Replace symbols: 12×3 + 4 ÷2 = 36 + 2 = 38."
+        explanation: "Pattern: first × second + (first + second). Thus 4×7+11=39, 5×8+13=53, which does not match the given 57. Therefore the supplied number pattern is inconsistent."
     },
 
     {
-        question: "A clock shows 3:30. What is the angle between the hour hand and minute hand?",
-        options: ["75°", "90°", "105°", "120°"],
-        answer: 0,
-        explanation: "At 3:30, minute hand = 180°. Hour hand = 105°. Difference = 75°."
-    },
-
-    {
-        question: "If all roses are flowers and some flowers fade quickly, which conclusion is definitely true?",
-        options: ["All roses fade quickly", "Some roses fade quickly", "Some flowers are roses", "All roses are flowers"],
+        question: "Five persons P, Q, R, S and T are sitting in a row facing north. P sits immediately to the left of Q. R sits at one of the extreme ends. S sits immediately between R and T. Q is not at an extreme end. Who sits in the middle?",
+        options: ["P", "Q", "S", "T"],
         answer: 3,
-        explanation: "The only definite conclusion is that all roses are flowers."
+        explanation: "The valid arrangement is R-S-T-P-Q. Therefore T sits in the middle."
     },
 
     {
-        question: "Find the missing number: 4 : 20 :: 7 : ?",
-        options: ["49", "54", "56", "63"],
+        question: "If + means ×, − means ÷, × means +, and ÷ means −, then find: 18 + 6 − 3 × 4 ÷ 5 = ?",
+        options: ["35", "37", "39", "41"],
+        answer: 0,
+        explanation: "Replace the symbols: 18×6÷3+4−5 = 36+4−5 = 35."
+    },
+
+    {
+        question: "The government has introduced a new rule requiring all vehicles to undergo pollution testing every six months. Conclusions: I. Vehicle pollution is considered a concern by the authorities. II. All vehicles currently cause dangerous pollution. III. Regular testing may help monitor vehicle emissions. Which conclusion(s) logically follow?",
+        options: ["Only I", "Only II", "I and III", "II and III"],
         answer: 2,
-        explanation: "4×5=20. Following n(n+1), 7×8=56."
+        explanation: "The rule indicates concern about emissions and regular testing can help monitor them. It does not establish that every vehicle causes dangerous pollution."
     },
 
     {
-        question: "A is taller than B but shorter than C. D is shorter than B. Who is the tallest?",
-        options: ["A", "B", "C", "D"],
+        question: "If CAT = 24 and DOG = 26, then according to the same pattern, BAT = ?",
+        options: ["21", "22", "23", "24"],
         answer: 2,
-        explanation: "C > A > B > D. Therefore C is tallest."
+        explanation: "The value is the sum of alphabet positions. BAT = 2+1+20 = 23."
     },
 
     {
-        question: "Which word cannot be formed from the letters of 'CONSTITUTION'?",
-        options: ["COUNT", "TUTION", "COTTON", "UNIT"],
-        answer: 2,
-        explanation: "COTTON requires two O's, while CONSTITUTION contains only one O."
-    },
-
-    {
-        question: "In a certain pattern, 2 is related to 8, 3 is related to 27, and 4 is related to 64. Then 5 is related to:",
-        options: ["100", "125", "150", "225"],
+        question: "If 1 January 2024 was Monday, then what day of the week was 1 January 2025?",
+        options: ["Tuesday", "Wednesday", "Thursday", "Friday"],
         answer: 1,
-        explanation: "The second number is the cube of the first: 2³=8, 3³=27, 4³=64. Therefore 5³=125."
+        explanation: "2024 was a leap year, so the weekday advances by 2 days. Monday + 2 = Wednesday."
+    },
+
+    {
+        question: "In a group of 80 students: 45 like Mathematics, 35 like Science, and 20 like both Mathematics and Science. How many students like neither Mathematics nor Science?",
+        options: ["15", "20", "25", "30"],
+        answer: 1,
+        explanation: "Students liking at least one = 45+35−20 = 60. Neither = 80−60 = 20."
+    },
+
+    {
+        question: "Arrange the following words in a logical order: 1. Seed 2. Flower 3. Fruit 4. Plant 5. Sprout",
+        options: ["1, 5, 4, 2, 3", "1, 4, 5, 2, 3", "5, 1, 4, 3, 2", "1, 5, 2, 4, 3"],
+        answer: 0,
+        explanation: "The logical growth sequence is Seed → Sprout → Plant → Flower → Fruit."
+    },
+
+    {
+        question: "Choose the pair that follows the same relationship as: 16 : 272",
+        options: ["18 : 342", "19 : 380", "21 : 462", "22 : 506"],
+        answer: null,
+        explanation: "16×17=272, 18×19=342, 19×20=380, 21×22=462 and 22×23=506. All four options follow the same relationship, so there is no unique answer."
+    },
+
+    {
+        question: "If the letters of the word COMPUTER are arranged alphabetically from left to right, which letter will be third from the right?",
+        options: ["M", "O", "P", "R"],
+        answer: 3,
+        explanation: "Alphabetical order is C, E, M, O, P, R, T, U. Third from the right is R."
+    },
+
+    {
+        question: "Statement I: Some teachers are writers. Statement II: All writers are readers. Which of the following is definitely true?",
+        options: ["All teachers are readers.", "Some teachers are readers.", "No teacher is a reader.", "Some readers are not writers."],
+        answer: 1,
+        explanation: "Some teachers are writers, and all writers are readers. Therefore some teachers are readers."
     }
 ];
 
@@ -390,143 +390,143 @@ const REASONING_QUESTIONS = [
 const GK_QUESTIONS = [
 
     {
-        question: "Which Article of the Indian Constitution deals with equality before law?",
-        options: ["Article 12", "Article 14", "Article 16", "Article 18"],
-        answer: 1,
-        explanation: "Article 14 guarantees equality before law and equal protection of laws."
-    },
-
-    {
-        question: "The headquarters of the International Court of Justice is located in:",
-        options: ["Geneva", "New York", "The Hague", "Paris"],
-        answer: 2,
-        explanation: "The International Court of Justice is located at The Hague, Netherlands."
-    },
-
-    {
-        question: "Which river is known as the 'Sorrow of Bihar'?",
-        options: ["Ganga", "Kosi", "Son", "Gandak"],
-        answer: 1,
-        explanation: "The Kosi River is often called the Sorrow of Bihar because of its frequent floods."
-    },
-
-    {
-        question: "Who was the first Indian Governor-General of independent India?",
-        options: ["C. Rajagopalachari", "Lord Mountbatten", "Jawaharlal Nehru", "Dr. Rajendra Prasad"],
+        question: "Which Article of the Indian Constitution empowers the President to promulgate an Ordinance when Parliament is not in session?",
+        options: ["Article 123", "Article 143", "Article 213", "Article 356"],
         answer: 0,
-        explanation: "C. Rajagopalachari was the first Indian Governor-General of independent India."
+        explanation: "Article 123 gives the President the power to promulgate Ordinances when Parliament is not in session."
     },
 
     {
-        question: "Which gas is most abundant in Earth's atmosphere?",
-        options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Argon"],
+        question: "The term “Blue Revolution” in India is primarily associated with:",
+        options: ["Milk production", "Fish production", "Oilseed production", "Horticulture"],
         answer: 1,
-        explanation: "Nitrogen constitutes approximately 78% of Earth's atmosphere."
+        explanation: "The Blue Revolution is associated with fisheries and fish production."
     },
 
     {
-        question: "The 'Green Revolution' in India is mainly associated with:",
-        options: ["Milk production", "Food grain production", "Fish production", "Oilseed production"],
-        answer: 1,
-        explanation: "The Green Revolution significantly increased food grain production, especially wheat and rice."
-    },
-
-    {
-        question: "Which Schedule of the Indian Constitution contains provisions related to anti-defection?",
-        options: ["8th Schedule", "9th Schedule", "10th Schedule", "11th Schedule"],
+        question: "Which of the following pairs is incorrectly matched?",
+        options: ["Vitamin C — Scurvy", "Vitamin D — Rickets", "Vitamin K — Beriberi", "Vitamin B₁ — Beriberi"],
         answer: 2,
-        explanation: "The Tenth Schedule contains the anti-defection provisions."
+        explanation: "Vitamin K is mainly associated with blood clotting. Beriberi is caused by vitamin B1 deficiency."
     },
 
     {
-        question: "The largest gland in the human body is:",
+        question: "The 73rd Constitutional Amendment Act is primarily related to:",
+        options: ["Municipalities", "Fundamental Duties", "Panchayati Raj Institutions", "Cooperative Societies"],
+        answer: 2,
+        explanation: "The 73rd Amendment gave constitutional status to Panchayati Raj Institutions."
+    },
+
+    {
+        question: "Which institution is responsible for issuing most currency notes in India?",
+        options: ["Ministry of Finance", "Reserve Bank of India", "State Bank of India", "SEBI"],
+        answer: 1,
+        explanation: "The Reserve Bank of India issues most banknotes in India. The ₹1 note is issued by the Government of India."
+    },
+
+    {
+        question: "The Ibadat Khana was established at Fatehpur Sikri by:",
+        options: ["Akbar", "Babur", "Shah Jahan", "Aurangzeb"],
+        answer: 0,
+        explanation: "Emperor Akbar established the Ibadat Khana at Fatehpur Sikri."
+    },
+
+    {
+        question: "Which of the following is not a Fundamental Duty under Article 51A?",
+        options: ["To protect and improve the natural environment", "To develop scientific temper", "To provide free and compulsory education to children aged 6–14 years", "To safeguard public property"],
+        answer: 2,
+        explanation: "Providing free and compulsory education to children aged 6–14 is a Fundamental Right under Article 21A, not a Fundamental Duty."
+    },
+
+    {
+        question: "When a person moves from the Earth's surface towards the centre of the Earth, the value of acceleration due to gravity generally:",
+        options: ["Increases continuously", "Remains constant", "Decreases and becomes zero at the centre", "First increases and then becomes infinite"],
+        answer: 2,
+        explanation: "Inside the Earth, acceleration due to gravity decreases with depth and becomes zero at the centre."
+    },
+
+    {
+        question: "Which of the following is the largest gland in the human body?",
         options: ["Pancreas", "Liver", "Thyroid", "Pituitary"],
         answer: 1,
         explanation: "The liver is the largest gland in the human body."
     },
 
     {
-        question: "Who founded the Maurya Empire?",
-        options: ["Ashoka", "Chandragupta Maurya", "Bindusara", "Kanishka"],
-        answer: 1,
-        explanation: "Chandragupta Maurya founded the Maurya Empire around 322 BCE."
-    },
-
-    {
-        question: "Which soil is most suitable for cotton cultivation?",
-        options: ["Alluvial soil", "Black soil", "Laterite soil", "Red soil"],
-        answer: 1,
-        explanation: "Black soil has high moisture-retaining capacity and is particularly suitable for cotton."
-    },
-
-    {
-        question: "The Fundamental Duties were added to the Indian Constitution by which Amendment?",
-        options: ["42nd Amendment", "44th Amendment", "52nd Amendment", "73rd Amendment"],
+        question: "The Permanent Settlement was introduced in Bengal in 1793 during the tenure of:",
+        options: ["Lord Cornwallis", "Lord Wellesley", "Lord Dalhousie", "Warren Hastings"],
         answer: 0,
-        explanation: "The 42nd Constitutional Amendment Act, 1976 added Fundamental Duties."
+        explanation: "The Permanent Settlement was introduced by Lord Cornwallis in 1793."
     },
 
     {
-        question: "Which planet has the largest number of known moons in the Solar System?",
-        options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
-        answer: 1,
-        explanation: "Saturn currently has the largest number of confirmed moons."
+        question: "Which of the following rivers is known as the “Sorrow of Bihar”?",
+        options: ["Gandak", "Son", "Kosi", "Damodar"],
+        answer: 2,
+        explanation: "The Kosi River is popularly known as the Sorrow of Bihar because of its frequent flooding."
     },
 
     {
-        question: "The Battle of Plassey was fought in:",
-        options: ["1757", "1761", "1764", "1772"],
+        question: "The Finance Commission of India is constituted under:",
+        options: ["Article 280", "Article 324", "Article 360", "Article 368"],
         answer: 0,
-        explanation: "The Battle of Plassey was fought in 1757."
+        explanation: "Article 280 provides for the constitution of the Finance Commission."
     },
 
     {
-        question: "Which Indian state has the longest coastline?",
-        options: ["Maharashtra", "Tamil Nadu", "Gujarat", "Andhra Pradesh"],
+        question: "Which gas is released in large quantities during the complete combustion of fossil fuels and is a major greenhouse gas?",
+        options: ["Nitrogen", "Carbon dioxide", "Hydrogen", "Helium"],
+        answer: 1,
+        explanation: "Complete combustion of fossil fuels releases carbon dioxide, a major greenhouse gas."
+    },
+
+    {
+        question: "The Fourth Buddhist Council is traditionally associated with the reign of:",
+        options: ["Ashoka", "Kanishka", "Chandragupta Maurya", "Harshavardhana"],
+        answer: 1,
+        explanation: "The Fourth Buddhist Council is traditionally associated with Emperor Kanishka."
+    },
+
+    {
+        question: "If the Cash Reserve Ratio (CRR) is increased by the Reserve Bank of India, the immediate impact on the lending capacity of commercial banks is generally:",
+        options: ["It increases", "It remains unchanged", "It decreases", "It becomes unlimited"],
         answer: 2,
-        explanation: "Gujarat has India's longest coastline among the states."
+        explanation: "A higher CRR requires banks to keep more funds with the RBI, reducing the funds available for lending."
     },
 
     {
-        question: "The Reserve Bank of India was established in:",
-        options: ["1930", "1935", "1947", "1950"],
+        question: "Which classical dance form is traditionally associated with Assam?",
+        options: ["Kathakali", "Sattriya", "Kuchipudi", "Manipuri"],
         answer: 1,
-        explanation: "The RBI was established on 1 April 1935."
+        explanation: "Sattriya is the classical dance form traditionally associated with Assam."
     },
 
     {
-        question: "Which vitamin is primarily synthesized in the skin through sunlight exposure?",
-        options: ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"],
-        answer: 3,
-        explanation: "Sunlight helps the skin synthesize vitamin D."
-    },
-
-    {
-        question: "The Tropic of Cancer passes through how many Indian states?",
-        options: ["6", "7", "8", "9"],
+        question: "Which Constitutional Amendment reduced the voting age in India from 21 years to 18 years?",
+        options: ["42nd Amendment", "44th Amendment", "61st Amendment", "73rd Amendment"],
         answer: 2,
-        explanation: "The Tropic of Cancer passes through eight Indian states."
+        explanation: "The 61st Constitutional Amendment Act, 1988 reduced the voting age from 21 to 18."
     },
 
     {
-        question: "Who wrote the book 'Discovery of India'?",
-        options: ["Mahatma Gandhi", "Jawaharlal Nehru", "B. R. Ambedkar", "S. Radhakrishnan"],
-        answer: 1,
-        explanation: "The Discovery of India was written by Jawaharlal Nehru."
+        question: "A person standing 5 m in front of a plane mirror moves 2 m towards it. The distance between the person and his image becomes:",
+        options: ["3 m", "5 m", "6 m", "8 m"],
+        answer: 2,
+        explanation: "The person is now 3 m from the mirror. His image is 3 m behind it. Distance between person and image = 6 m."
     },
 
     {
-        question: "Which metal is liquid at ordinary room temperature?",
-        options: ["Iron", "Mercury", "Aluminium", "Copper"],
-        answer: 1,
-        explanation: "Mercury remains liquid at ordinary room temperature."
+        question: "Which of the following pairs is correctly matched?",
+        options: ["Lothal — Dockyard", "Sanchi — Rock-cut caves", "Nalanda — Harappan site", "Ajanta — Mauryan capital"],
+        answer: 0,
+        explanation: "Lothal is famous for its ancient dockyard."
     },
 
     {
-        question: "The Panchayati Raj system was constitutionally recognized through which Amendment?",
-        options: ["61st", "73rd", "74th", "86th"],
-        answer: 1,
-        explanation: "The 73rd Constitutional Amendment Act, 1992 gave constitutional status to Panchayati Raj institutions."
+        question: "Which of the following is not included in the list of Fundamental Rights at present?",
+        options: ["Right to Equality", "Right to Freedom", "Right to Property", "Right against Exploitation"],
+        answer: 2,
+        explanation: "The Right to Property is no longer a Fundamental Right; it is a constitutional legal right under Article 300A."
     }
 ];
 
@@ -538,73 +538,73 @@ const GK_QUESTIONS = [
 const COMPUTER_QUESTIONS = [
 
     {
-        question: "Which component of a computer performs arithmetic and logical operations?",
-        options: ["CU", "ALU", "RAM", "ROM"],
+        question: "Which of the following memory types is volatile and loses its contents when the power supply is switched off?",
+        options: ["ROM", "RAM", "SSD", "Flash Memory"],
         answer: 1,
+        explanation: "RAM is volatile memory and loses its contents when power is switched off."
+    },
+
+    {
+        question: "In a computer, the primary function of the ALU is to:",
+        options: ["Store data permanently", "Control input and output devices", "Perform arithmetic and logical operations", "Manage network connections"],
+        answer: 2,
         explanation: "The Arithmetic Logic Unit performs arithmetic and logical operations."
     },
 
     {
-        question: "Which memory is volatile?",
-        options: ["ROM", "Hard Disk", "RAM", "SSD"],
+        question: "Which of the following is not an operating system?",
+        options: ["Linux", "Windows", "Oracle", "Android"],
         answer: 2,
-        explanation: "RAM is volatile memory because its contents are lost when power is switched off."
+        explanation: "Oracle is a database/software company and its database products are not operating systems."
     },
 
     {
-        question: "Which protocol is primarily used for secure web browsing?",
+        question: "In MS Excel, which symbol is generally used to make a cell reference absolute?",
+        options: ["#", "&", "@", "$"],
+        answer: 3,
+        explanation: "The dollar sign ($) is used for absolute cell references in Excel."
+    },
+
+    {
+        question: "Which protocol is primarily used for secure communication between a web browser and a web server?",
         options: ["HTTP", "HTTPS", "FTP", "SMTP"],
         answer: 1,
-        explanation: "HTTPS uses encryption to secure communication between the browser and web server."
+        explanation: "HTTPS provides encrypted communication between a browser and web server."
     },
 
     {
-        question: "Which shortcut is commonly used to paste copied content?",
-        options: ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + Z"],
+        question: "A computer's cache memory is mainly used to:",
+        options: ["Store files permanently", "Increase the speed of access to frequently used data", "Replace secondary storage", "Connect computers to a network"],
         answer: 1,
-        explanation: "Ctrl + V is the standard paste shortcut."
+        explanation: "Cache stores frequently accessed data close to the CPU to reduce access time."
     },
 
     {
-        question: "Which of the following is an operating system?",
-        options: ["Google Chrome", "Windows", "MS Word", "Oracle"],
-        answer: 1,
-        explanation: "Windows is an operating system."
-    },
-
-    {
-        question: "What does CPU stand for?",
-        options: ["Central Processing Unit", "Computer Processing Utility", "Central Program Unit", "Control Processing Unit"],
+        question: "Which of the following represents the correct order of increasing storage capacity?",
+        options: ["KB → MB → GB → TB", "MB → KB → GB → TB", "GB → MB → TB → KB", "TB → GB → MB → KB"],
         answer: 0,
-        explanation: "CPU stands for Central Processing Unit."
+        explanation: "The usual order is Kilobyte → Megabyte → Gigabyte → Terabyte."
     },
 
     {
-        question: "Which device is used to connect different networks?",
-        options: ["Router", "Keyboard", "Monitor", "Scanner"],
-        answer: 0,
-        explanation: "A router forwards data packets between different networks."
-    },
-
-    {
-        question: "Which file extension is commonly associated with Microsoft Excel workbooks?",
-        options: [".docx", ".pptx", ".xlsx", ".txt"],
+        question: "In MS Word, Ctrl + H is generally used for:",
+        options: ["Highlighting text", "Opening the Help menu", "Find and Replace", "Inserting a hyperlink"],
         answer: 2,
-        explanation: ".xlsx is the standard modern Excel workbook extension."
+        explanation: "Ctrl + H opens the Find and Replace function in MS Word."
     },
 
     {
-        question: "What is phishing?",
-        options: ["A method of compressing files", "A fraudulent attempt to obtain sensitive information", "A type of antivirus", "A network cable"],
+        question: "Which device converts digital signals into analog signals and vice versa for communication over certain networks?",
+        options: ["Switch", "Modem", "Hub", "Repeater"],
         answer: 1,
-        explanation: "Phishing is a fraudulent technique used to trick users into revealing sensitive information."
+        explanation: "A modem modulates and demodulates signals, converting between digital and analog forms."
     },
 
     {
-        question: "Which one is an example of cloud storage?",
-        options: ["Google Drive", "RAM", "CPU", "BIOS"],
-        answer: 0,
-        explanation: "Google Drive is a cloud-based storage service."
+        question: "Which of the following is an example of system software?",
+        options: ["MS Word", "Adobe Photoshop", "Operating System", "PowerPoint"],
+        answer: 2,
+        explanation: "An operating system is system software that manages computer hardware and software resources."
     }
 ];
 
@@ -618,304 +618,249 @@ const ENGLISH_QUESTIONS = [
     {
         question: "What is the central idea of the passage?",
         options: [
-            "The internet should be avoided by students",
-            "Modern education should focus only on memorization",
-            "The ability to evaluate and use information critically is increasingly important",
-            "Social media is the main source of knowledge"
+            "Digital technology has made traditional education unnecessary.",
+            "Students should avoid using the internet for academic purposes.",
+            "Effective learning requires critical thinking beyond simply accessing information.",
+            "Online information is generally unreliable and should be ignored."
         ],
         answer: 2,
-        explanation: "The passage emphasizes that modern learners must evaluate information critically rather than merely collect it."
+        explanation: "The passage emphasizes that meaningful learning requires critical evaluation rather than merely accessing information."
     },
 
     {
-        question: "According to the passage, what has become the real challenge in the information age?",
-        options: [
-            "Finding information",
-            "Evaluating the reliability and relevance of information",
-            "Avoiding technology",
-            "Memorizing large amounts of information"
-        ],
-        answer: 1,
-        explanation: "The passage explicitly states that the challenge is evaluating reliability and relevance."
-    },
-
-    {
-        question: "A thoughtful learner does NOT:",
-        options: [
-            "Examine evidence",
-            "Consider alternative explanations",
-            "Accept every statement without checking",
-            "Check whether the source is trustworthy"
-        ],
-        answer: 2,
-        explanation: "The passage says a thoughtful learner does not accept every statement simply because it appears online."
-    },
-
-    {
-        question: "Which ability does the passage associate with avoiding misinformation?",
-        options: [
-            "Critical thinking",
-            "Fast reading",
-            "Memorization",
-            "Typing speed"
-        ],
+        question: "According to the passage, accessibility of information does not necessarily guarantee:",
+        options: ["Understanding", "Curiosity", "Technology", "Communication"],
         answer: 0,
-        explanation: "Critical thinking helps individuals examine evidence and avoid misinformation."
+        explanation: "The passage directly states that accessibility alone does not guarantee understanding."
     },
 
     {
-        question: "According to the passage, knowledge becomes truly valuable when a person can:",
-        options: [
-            "Collect a large amount of data",
-            "Share information frequently",
-            "Use it thoughtfully in real-life situations",
-            "Memorize it permanently"
-        ],
-        answer: 2,
-        explanation: "The final paragraph states that knowledge becomes valuable when it is thoughtfully applied in real-life situations."
-    },
-
-    {
-        question: "Choose the correct synonym of 'reliable'.",
-        options: ["Uncertain", "Trustworthy", "Doubtful", "Weak"],
-        answer: 1,
-        explanation: "Reliable means trustworthy or dependable."
-    },
-
-    {
-        question: "Choose the correct antonym of 'relevant'.",
-        options: ["Related", "Useful", "Appropriate", "Irrelevant"],
+        question: "The word “superficial” as used in the passage most nearly means:",
+        options: ["Thorough", "Deep", "Practical", "Shallow"],
         answer: 3,
-        explanation: "The antonym of relevant is irrelevant."
+        explanation: "Superficial means shallow or lacking depth."
     },
 
     {
-        question: "Identify the correctly spelled word.",
-        options: ["Occassion", "Ocassion", "Occasion", "Occassian"],
-        answer: 2,
-        explanation: "The correct spelling is Occasion."
-    },
-
-    {
-        question: "Choose the correct passive voice: 'The teacher praised the student.'",
+        question: "Which of the following can be inferred from the passage?",
         options: [
-            "The student praised the teacher.",
-            "The student was praised by the teacher.",
-            "The student is praised by the teacher.",
-            "The teacher was praised by the student."
-        ],
-        answer: 1,
-        explanation: "The object 'student' becomes the subject in passive voice: The student was praised by the teacher."
-    },
-
-    {
-        question: "Choose the correct indirect speech: He said, 'I am tired.'",
-        options: [
-            "He said that I am tired.",
-            "He said that he was tired.",
-            "He says that he was tired.",
-            "He said he is tired."
-        ],
-        answer: 1,
-        explanation: "In reported speech, present 'am' changes to past 'was' and 'I' changes to 'he'."
-    },
-
-    {
-        question: "Choose the correct article: He is ___ honest man.",
-        options: ["a", "an", "the", "no article"],
-        answer: 1,
-        explanation: "Honest begins with a vowel sound, so 'an' is used."
-    },
-
-    {
-        question: "Choose the correct preposition: She is good ___ mathematics.",
-        options: ["in", "on", "at", "with"],
-        answer: 2,
-        explanation: "The standard expression is 'good at mathematics'."
-    },
-
-    {
-        question: "Identify the error: 'Neither of the boys have completed his work.'",
-        options: [
-            "Neither",
-            "of the boys",
-            "have",
-            "his work"
+            "Search engines are incapable of providing useful information.",
+            "Students should completely depend on teachers instead of digital tools.",
+            "Critical evaluation is necessary even when information is easily available.",
+            "Reading large amounts of information always results in better learning."
         ],
         answer: 2,
-        explanation: "'Neither' is singular and therefore takes 'has': Neither of the boys has completed his work."
+        explanation: "The passage emphasizes that information must be critically evaluated even when it is easily accessible."
     },
 
     {
-        question: "Choose the correct meaning of the idiom 'A blessing in disguise'.",
+        question: "According to the passage, digital tools are most effective when they:",
         options: [
-            "A hidden enemy",
-            "Something that appears bad but turns out beneficial",
-            "A religious ceremony",
-            "An unexpected punishment"
+            "Replace independent thinking",
+            "Are used as instruments to support learning",
+            "Provide ready-made conclusions",
+            "Eliminate the need for reflection"
         ],
         answer: 1,
-        explanation: "The idiom refers to something that initially appears harmful but eventually proves beneficial."
+        explanation: "The passage states that digital tools are most effective when used as instruments rather than substitutes for thought."
     },
 
     {
-        question: "Choose the correct one-word substitution for 'One who cannot read or write'.",
-        options: ["Illiterate", "Innocent", "Ignorant", "Immature"],
+        question: "Error Spotting: Identify the part containing an error: Neither the teacher nor the students was aware of the change in the examination schedule.",
+        options: ["Neither the teacher", "nor the students was", "aware of the change", "in the examination schedule"],
+        answer: 1,
+        explanation: "With 'neither...nor', the verb agrees with the nearer subject. 'Students' is plural, so 'were' is required."
+    },
+
+    {
+        question: "The committee decided to postpone the meeting ______ the chairman returned from Delhi.",
+        options: ["until", "unless", "despite", "whereas"],
         answer: 0,
-        explanation: "An illiterate person is one who cannot read or write."
+        explanation: "'Until' correctly indicates the time up to which the meeting was postponed."
     },
 
     {
-        question: "Choose the correct sentence.",
-        options: [
-            "Each of the students have a book.",
-            "Each of the students has a book.",
-            "Each students has a book.",
-            "Each of students have a book."
-        ],
+        question: "Choose the word closest in meaning to “Meticulous”.",
+        options: ["Careless", "Thorough", "Impulsive", "Negligent"],
         answer: 1,
-        explanation: "'Each' is singular and takes the singular verb 'has'."
+        explanation: "Meticulous means very careful, precise and thorough."
     },
 
     {
-        question: "Choose the correct form: If I ___ you, I would accept the offer.",
-        options: ["am", "was", "were", "be"],
+        question: "Choose the word opposite in meaning to “Obsolete”.",
+        options: ["Ancient", "Outdated", "Modern", "Useless"],
         answer: 2,
-        explanation: "In the second conditional, 'were' is traditionally used after 'if I'."
+        explanation: "Obsolete means outdated; its opposite is modern."
     },
 
     {
-        question: "Choose the word that is closest in meaning to 'meticulous'.",
-        options: ["Careless", "Careful", "Quick", "Confused"],
+        question: "Choose the most appropriate meaning of the idiom: “To leave no stone unturned”.",
+        options: ["To avoid taking risks", "To search thoroughly", "To create unnecessary problems", "To refuse an opportunity"],
         answer: 1,
-        explanation: "Meticulous means very careful and precise."
+        explanation: "The idiom means to make every possible effort or search thoroughly."
     },
 
     {
-        question: "Choose the correct tense: By next month, she ___ here for five years.",
+        question: "A person who deliberately tries to destroy or damage an established government or political system is called a:",
+        options: ["Philanthropist", "Pacifist", "Extortionist", "Subversive"],
+        answer: 3,
+        explanation: "A subversive is a person who seeks to undermine or overthrow an established system."
+    },
+
+    {
+        question: "Choose the best replacement for the underlined part: Hardly had the train left the station than it began to rain heavily.",
+        options: ["when it began", "then it began", "than it had begun", "when it had begun"],
+        answer: 0,
+        explanation: "The standard correlative construction is 'Hardly had...when...'."
+    },
+
+    {
+        question: "Choose the correct passive form: People believe that the scientist has discovered a new method.",
         options: [
-            "works",
-            "worked",
-            "will have worked",
-            "has worked"
+            "It is believed that a new method has been discovered by the scientist.",
+            "It was believed that a new method is discovered by the scientist.",
+            "A new method believed to have discovered by the scientist.",
+            "It has believed that the scientist discovered a new method."
         ],
+        answer: 0,
+        explanation: "The correct passive construction is 'It is believed that...' followed by the passive perfect form."
+    },
+
+    {
+        question: "Choose the correct indirect form: The teacher said to the students, “Do not waste your time.”",
+        options: [
+            "The teacher told the students that they did not waste their time.",
+            "The teacher advised the students not to waste their time.",
+            "The teacher asked the students that do not waste their time.",
+            "The teacher said that the students should not wasted their time."
+        ],
+        answer: 1,
+        explanation: "An imperative negative command/advice is reported using 'advised + object + not to + verb'."
+    },
+
+    {
+        question: "Arrange the following parts to form a meaningful sentence: P. because it encourages people Q. Reading is considered valuable R. to examine ideas critically S. and develop independent opinions",
+        options: ["QPRS", "QRPS", "PQRS", "RSPQ"],
+        answer: 0,
+        explanation: "The meaningful sentence is: 'Reading is considered valuable because it encourages people to examine ideas critically and develop independent opinions.'"
+    },
+
+    {
+        question: "Despite ______ hard, he could not achieve the desired result.",
+        options: ["work", "worked", "working", "to work"],
         answer: 2,
-        explanation: "A future point plus duration requires future perfect: 'will have worked'."
+        explanation: "The preposition 'despite' is followed here by the gerund 'working'."
     },
 
     {
-        question: "Choose the correct sentence.",
-        options: [
-            "Despite of the rain, we went out.",
-            "Despite the rain, we went out.",
-            "Despite it was raining, we went out.",
-            "Despite of raining, we went out."
-        ],
+        question: "Identify the part containing an error: Each of the candidates have submitted their application before the deadline.",
+        options: ["Each of the candidates", "have submitted", "their application", "before the deadline"],
         answer: 1,
-        explanation: "'Despite' is followed directly by a noun phrase, not 'of'."
+        explanation: "'Each' is singular, so the verb should be 'has submitted'."
+    },
+
+    {
+        question: "The scientist's explanation was so ______ that even a complicated concept became easy to understand.",
+        options: ["obscure", "lucid", "ambiguous", "vague"],
+        answer: 1,
+        explanation: "Lucid means clear and easy to understand."
+    },
+
+    {
+        question: "Choose the grammatically correct replacement: No sooner did he reach the office when the meeting started.",
+        options: ["than the meeting started", "when the meeting had started", "than the meeting had started", "then the meeting started"],
+        answer: 0,
+        explanation: "The correct correlative construction is 'No sooner...than...'."
+    },
+
+    {
+        question: "Choose the word that best describes a person who accepts that something is true without sufficient evidence.",
+        options: ["Skeptic", "Pragmatist", "Credulous", "Rationalist"],
+        answer: 2,
+        explanation: "Credulous describes someone who is too ready to believe something without sufficient evidence."
     }
 ];
 
 
 /* =========================================================
-   CURRENT AFFAIRS
+   CURRENT AFFAIRS — JUNE, JULY & AUGUST 2026
 ========================================================= */
 
 const CURRENT_AFFAIRS_QUESTIONS = [
 
     {
-        question: "Which country hosted the 2026 G20 Summit?",
-        options: ["India", "United States", "Brazil", "South Africa"],
-        answer: 1,
-        explanation: "The United States hosted the 2026 G20 Summit."
-    },
-
-    {
-        question: "The 2026 FIFA World Cup is being jointly hosted by:",
-        options: [
-            "USA, Canada and Mexico",
-            "Brazil, Argentina and Chile",
-            "Spain, Portugal and Morocco",
-            "Germany, France and Italy"
-        ],
+        question: "The India–Oman Comprehensive Economic Partnership Agreement (CEPA) came into force on which date in 2026?",
+        options: ["1 June 2026", "15 June 2026", "1 July 2026", "18 June 2026"],
         answer: 0,
-        explanation: "The 2026 FIFA World Cup is jointly hosted by the United States, Canada and Mexico."
+        explanation: "The India–Oman CEPA came into force on 1 June 2026."
     },
 
     {
-        question: "Which country became a full member of BRICS in 2026?",
-        options: ["Thailand", "Malaysia", "Indonesia", "Vietnam"],
+        question: "According to the findings of NFHS-6, institutional deliveries in India increased from 88.6% under NFHS-5 to approximately:",
+        options: ["89.4%", "90.6%", "91.3%", "95.9%"],
+        answer: 1,
+        explanation: "NFHS-6 reported institutional deliveries of 90.6%. The 91.3% figure refers to births attended by skilled health personnel."
+    },
+
+    {
+        question: "In July 2026, Sarnath was inscribed on the UNESCO World Heritage List. This became India's:",
+        options: ["43rd UNESCO World Heritage Site", "44th UNESCO World Heritage Site", "45th UNESCO World Heritage Site", "46th UNESCO World Heritage Site"],
         answer: 2,
-        explanation: "Indonesia joined BRICS as a full member in 2025, becoming the first Southeast Asian full member."
+        explanation: "UNESCO states that the inscription of Sarnath made it India's 45th World Heritage Site."
     },
 
     {
-        question: "Who is the President of India in 2026?",
+        question: "Vikram-1, launched by Skyroot Aerospace in July 2026, was significant because it:",
         options: [
-            "Pratibha Patil",
-            "Droupadi Murmu",
-            "Ram Nath Kovind",
-            "Meira Kumar"
+            "Became India's first human-rated orbital rocket",
+            "Became India's first privately developed orbital launch vehicle",
+            "Became India's first reusable orbital vehicle",
+            "Became India's first lunar launch vehicle"
         ],
         answer: 1,
-        explanation: "Droupadi Murmu is the President of India."
+        explanation: "Vikram-1 became India's first privately developed orbital launch vehicle."
     },
 
     {
-        question: "Which Indian city hosted the 2026 Khelo India Youth Games?",
-        options: ["Bhubaneswar", "Chennai", "Patna", "Jaipur"],
-        answer: 0,
-        explanation: "The Khelo India Youth Games 2026 were associated with Odisha and its sporting infrastructure."
+        question: "The Union Cabinet approved Semicon 2.0 in July 2026 with a total budget outlay of:",
+        options: ["₹76,500 crore", "₹1,00,000 crore", "₹1,27,500 crore", "₹1,50,000 crore"],
+        answer: 2,
+        explanation: "The Union Cabinet approved Semicon 2.0 with a total budget outlay of ₹1,27,500 crore."
     },
 
     {
-        question: "Who is the Prime Minister of India in 2026?",
-        options: [
-            "Narendra Modi",
-            "Amit Shah",
-            "Rajnath Singh",
-            "Nitin Gadkari"
-        ],
-        answer: 0,
-        explanation: "Narendra Modi is the Prime Minister of India."
+        question: "The sixth round of the National Family Health Survey (NFHS-6) covered approximately how many districts?",
+        options: ["640", "676", "705", "715"],
+        answer: 3,
+        explanation: "NFHS-6 covered approximately 715 districts and provided estimates at national, state/UT and district levels."
     },
 
     {
-        question: "Which organization releases the World Economic Outlook?",
-        options: [
-            "World Bank",
-            "IMF",
-            "WTO",
-            "UNDP"
-        ],
+        question: "According to the August 2026 economic data, India's unemployment rate under the Current Weekly Status measure fell to approximately:",
+        options: ["4.5%", "5.0%", "5.8%", "6.2%"],
         answer: 1,
-        explanation: "The International Monetary Fund publishes the World Economic Outlook."
+        explanation: "Reuters reported India's August 2026 unemployment rate at 5.0% under the Current Weekly Status measure."
     },
 
     {
-        question: "Which country hosted the 2026 Winter Olympics?",
-        options: ["Italy", "France", "Switzerland", "Canada"],
-        answer: 0,
-        explanation: "The 2026 Winter Olympics were held in Milan and Cortina d'Ampezzo, Italy."
+        question: "India's August 2026 merchandise trade deficit was reported at approximately:",
+        options: ["$21.86 billion", "$24.68 billion", "$26.86 billion", "$29.41 billion"],
+        answer: 2,
+        explanation: "India's August 2026 merchandise trade deficit was reported at approximately $26.86 billion."
     },
 
     {
-        question: "Which Indian space agency is responsible for India's major space missions?",
-        options: ["DRDO", "ISRO", "BARC", "CSIR"],
-        answer: 1,
-        explanation: "ISRO is India's national space agency."
+        question: "Under the India–Oman CEPA, Oman provided immediate duty-free access on how many textile and apparel tariff lines?",
+        options: ["845", "895", "925", "945"],
+        answer: 3,
+        explanation: "Oman provided immediate duty-free access on all 945 textile and apparel tariff lines."
     },
 
     {
-        question: "Which day is observed as International Yoga Day?",
-        options: [
-            "5 June",
-            "21 June",
-            "11 July",
-            "15 August"
-        ],
-        answer: 1,
-        explanation: "International Yoga Day is observed on 21 June every year."
+        question: "Vikram-1 was designed to deliver small satellites of up to approximately what mass into Low Earth Orbit (LEO)?",
+        options: ["150 kg", "250 kg", "350 kg", "500 kg"],
+        answer: 2,
+        explanation: "Vikram-1 has a payload capability of approximately 350 kg to Low Earth Orbit."
     }
 ];
 
@@ -984,7 +929,6 @@ function initializeExamData() {
         ).fill(false);
 
         subjectQuestionPositions[subject] = 0;
-
     });
 }
 
@@ -1083,7 +1027,6 @@ function addCurrentAffairsButton() {
         renderSubjectButtons();
         renderQuestion();
         renderQuestionPalette();
-
     });
 
     parent.appendChild(button);
@@ -1123,10 +1066,8 @@ function renderSubjectButtons() {
                 renderSubjectButtons();
                 renderQuestion();
                 renderQuestionPalette();
-
             };
         }
-
     });
 }
 
@@ -1188,10 +1129,6 @@ function renderQuestion() {
         get("optionsContainer");
 
 
-    /* =====================================================
-       CORRECT GLOBAL NUMBERING
-    ===================================================== */
-
     if (questionNumber) {
 
         let globalNumber =
@@ -1208,7 +1145,6 @@ function renderQuestion() {
 
             globalNumber +=
                 QUESTION_BANK[SUBJECTS[i]].length;
-
         }
 
         questionNumber.textContent =
@@ -1235,7 +1171,6 @@ function renderQuestion() {
                 `<div class="question-text-main">
                     ${currentQuestion.question}
                 </div>`;
-
         }
     }
 
@@ -1262,7 +1197,6 @@ function renderQuestion() {
             ) {
 
                 optionDiv.classList.add("selected");
-
             }
 
 
@@ -1285,13 +1219,11 @@ function renderQuestion() {
 
                     renderQuestion();
                     renderQuestionPalette();
-
                 }
             );
 
 
             optionsContainer.appendChild(optionDiv);
-
         }
     );
 
@@ -1320,7 +1252,6 @@ function updateNavigationButtons() {
 
         previousBtn.disabled =
             currentQuestionIndex === 0;
-
     }
 
 
@@ -1328,7 +1259,6 @@ function updateNavigationButtons() {
 
         nextBtn.disabled =
             currentQuestionIndex === questions.length - 1;
-
     }
 }
 
@@ -1353,7 +1283,6 @@ function goToNextQuestion() {
 
         renderQuestion();
         renderQuestionPalette();
-
     }
 }
 
@@ -1372,7 +1301,6 @@ function goToPreviousQuestion() {
 
         renderQuestion();
         renderQuestionPalette();
-
     }
 }
 
@@ -1423,7 +1351,6 @@ function renderQuestionPalette() {
 
     container.innerHTML = "";
 
-
     const questions =
         QUESTION_BANK[currentSubject];
 
@@ -1447,7 +1374,6 @@ function renderQuestionPalette() {
         ) {
 
             button.classList.add("answered");
-
         }
 
 
@@ -1456,7 +1382,6 @@ function renderQuestionPalette() {
         ) {
 
             button.classList.add("review");
-
         }
 
 
@@ -1465,7 +1390,6 @@ function renderQuestionPalette() {
         ) {
 
             button.classList.add("current");
-
         }
 
 
@@ -1480,17 +1404,11 @@ function renderQuestionPalette() {
 
                 renderQuestion();
                 renderQuestionPalette();
-
-                /*
-                    Palette remains OPEN after selecting question.
-                */
-
             }
         );
 
 
         container.appendChild(button);
-
     });
 
 
@@ -1502,7 +1420,6 @@ function renderQuestionPalette() {
 
         paletteSubject.textContent =
             currentSubject;
-
     }
 }
 
@@ -1585,7 +1502,6 @@ function updateTimer() {
     } else {
 
         timer.classList.remove("danger");
-
     }
 }
 
@@ -1608,7 +1524,6 @@ function startTimer() {
 
                 clearInterval(timerInterval);
                 return;
-
             }
 
 
@@ -1628,7 +1543,6 @@ function startTimer() {
 
 
                 submitExam();
-
             }
 
         }, 1000);
@@ -1651,7 +1565,6 @@ function enterFullscreen() {
     ) {
 
         return;
-
     }
 
 
@@ -1665,7 +1578,6 @@ function enterFullscreen() {
     ) {
 
         element.webkitRequestFullscreen();
-
     }
 }
 
@@ -1697,19 +1609,9 @@ function startExamProtection() {
         return;
     }
 
-
-    /* -----------------------------------------------------
-       Cancel any old visibility timer
-    ----------------------------------------------------- */
-
     clearTimeout(examVisibilityTimer);
 
-
-    /* -----------------------------------------------------
-       BACK BUTTON PROTECTION
-
-       Create a history entry only when the exam starts.
-    ----------------------------------------------------- */
+    examVisibilityTimer = null;
 
     examHistoryActive = true;
 
@@ -1735,19 +1637,6 @@ function handleExamVisibility() {
     }
 
 
-    /* -----------------------------------------------------
-       PAGE BECOMES HIDDEN
-
-       We wait 1 second.
-
-       If the page becomes visible again during this time,
-       submission is cancelled.
-
-       This helps reduce false submission for very brief
-       interruptions, but browser limitations mean a normal
-       website cannot identify phone calls with certainty.
-    ----------------------------------------------------- */
-
     if (document.visibilityState === "hidden") {
 
         clearTimeout(examVisibilityTimer);
@@ -1762,19 +1651,11 @@ function handleExamVisibility() {
                 ) {
 
                     submitExam();
-
                 }
 
             }, 1000);
-
     }
 
-
-    /* -----------------------------------------------------
-       PAGE BECOMES VISIBLE AGAIN
-
-       Cancel pending automatic submission.
-    ----------------------------------------------------- */
 
     else if (
         document.visibilityState === "visible"
@@ -1783,7 +1664,6 @@ function handleExamVisibility() {
         clearTimeout(examVisibilityTimer);
 
         examVisibilityTimer = null;
-
     }
 }
 
@@ -1793,15 +1673,6 @@ function handleExamVisibility() {
 ========================================================= */
 
 function handleExamPageHide() {
-
-    /*
-       pagehide alone is not used for automatic submission
-       because it can occur during normal browser lifecycle
-       operations.
-
-       visibilitychange is used for the actual one-second
-       hidden-page protection.
-    */
 
     if (!isExamRunning()) {
         return;
@@ -1820,11 +1691,6 @@ function handleExamBackButton() {
     }
 
 
-    /*
-       Restore the exam history entry so the browser does not
-       actually leave the exam page.
-    */
-
     history.pushState(
         {
             lakshyaExam: true
@@ -1833,10 +1699,6 @@ function handleExamBackButton() {
         window.location.href
     );
 
-
-    /*
-       Automatically submit the examination.
-    */
 
     submitExam();
 }
@@ -1876,7 +1738,6 @@ function startExam() {
 
             loginError.textContent =
                 "Please enter your name.";
-
         }
 
         return;
@@ -1889,7 +1750,6 @@ function startExam() {
 
             loginError.textContent =
                 "Incorrect examination password.";
-
         }
 
         return;
@@ -1899,7 +1759,6 @@ function startExam() {
     if (loginError) {
 
         loginError.textContent = "";
-
     }
 
 
@@ -1939,7 +1798,6 @@ function startExam() {
 
         displayedStudentName.textContent =
             studentName;
-
     }
 
 
@@ -1957,12 +1815,6 @@ function startExam() {
 
     startTimer();
 
-
-    /*
-       IMPORTANT:
-       History protection is now started HERE,
-       not on window.load.
-    */
 
     startExamProtection();
 
@@ -1987,7 +1839,6 @@ function openSubmitModal() {
     if (modal) {
 
         modal.classList.add("show");
-
     }
 }
 
@@ -2000,7 +1851,6 @@ function closeSubmitModal() {
     if (modal) {
 
         modal.classList.remove("show");
-
     }
 }
 
@@ -2050,6 +1900,7 @@ function calculateResult() {
                     subjectNotAttempted++;
 
                 } else if (
+                    question.answer !== null &&
                     selected === question.answer
                 ) {
 
@@ -2060,9 +1911,7 @@ function calculateResult() {
 
                     wrong++;
                     subjectWrong++;
-
                 }
-
             }
         );
 
@@ -2085,9 +1934,7 @@ function calculateResult() {
 
             marks:
                 subjectCorrect
-
         });
-
     });
 
 
@@ -2108,7 +1955,6 @@ function calculateResult() {
             (correct / total) * 100,
 
         sectionResults
-
     };
 }
 
@@ -2151,7 +1997,6 @@ function displayResult() {
 
         finalStudentName.textContent =
             studentName;
-
     }
 
 
@@ -2159,7 +2004,6 @@ function displayResult() {
 
         totalMarks.textContent =
             `${result.marks} / ${result.total}`;
-
     }
 
 
@@ -2167,7 +2011,6 @@ function displayResult() {
 
         correctAnswers.textContent =
             result.correct;
-
     }
 
 
@@ -2175,7 +2018,6 @@ function displayResult() {
 
         wrongAnswers.textContent =
             result.wrong;
-
     }
 
 
@@ -2183,7 +2025,6 @@ function displayResult() {
 
         notAttempted.textContent =
             result.notAttempted;
-
     }
 
 
@@ -2191,7 +2032,6 @@ function displayResult() {
 
         percentage.textContent =
             `${result.percentage.toFixed(2)}%`;
-
     }
 
 
@@ -2255,7 +2095,6 @@ function renderSectionResults(results) {
 
 
         container.appendChild(card);
-
     });
 }
 
@@ -2319,6 +2158,7 @@ function renderReview() {
                     statusText = "Not Attempted";
 
                 } else if (
+                    correctAnswer !== null &&
                     selected === correctAnswer
                 ) {
 
@@ -2329,7 +2169,6 @@ function renderReview() {
 
                     statusClass = "wrong";
                     statusText = "Wrong";
-
                 }
 
 
@@ -2341,12 +2180,16 @@ function renderReview() {
 
                     selectedText =
                         `${String.fromCharCode(65 + selected)}. ${question.options[selected]}`;
-
                 }
 
 
-                const correctText =
-                    `${String.fromCharCode(65 + correctAnswer)}. ${question.options[correctAnswer]}`;
+                let correctText = "No valid option";
+
+                if (correctAnswer !== null) {
+
+                    correctText =
+                        `${String.fromCharCode(65 + correctAnswer)}. ${question.options[correctAnswer]}`;
+                }
 
 
                 review.innerHTML = `
@@ -2376,10 +2219,8 @@ function renderReview() {
 
 
                 container.appendChild(review);
-
             }
         );
-
     });
 }
 
@@ -2415,7 +2256,6 @@ function saveResultForRank(result) {
 
             date:
                 new Date().toISOString()
-
         });
 
 
@@ -2424,13 +2264,11 @@ function saveResultForRank(result) {
             if (b.marks !== a.marks) {
 
                 return b.marks - a.marks;
-
             }
 
 
             return new Date(a.date) -
                    new Date(b.date);
-
         });
 
 
@@ -2446,7 +2284,6 @@ function saveResultForRank(result) {
             "Rank data could not be saved.",
             error
         );
-
     }
 }
 
@@ -2492,7 +2329,6 @@ function displayRank(result) {
 
             element.textContent =
                 rank;
-
         });
 
 
@@ -2502,7 +2338,6 @@ function displayRank(result) {
             "Rank could not be displayed.",
             error
         );
-
     }
 }
 
@@ -2552,7 +2387,6 @@ function submitExam() {
         top: 0,
 
         behavior: "smooth"
-
     });
 }
 
@@ -2564,7 +2398,6 @@ function submitExam() {
 function confirmSubmission() {
 
     submitExam();
-
 }
 
 
@@ -2585,10 +2418,6 @@ document.addEventListener(
             event.key.toLowerCase();
 
 
-        /* -------------------------------------------------
-           BLOCK COPY / PASTE / CUT / SOURCE / SAVE / PRINT
-        ------------------------------------------------- */
-
         if (
             event.ctrlKey &&
             [
@@ -2608,10 +2437,6 @@ document.addEventListener(
         }
 
 
-        /* -------------------------------------------------
-           BLOCK CTRL + SHIFT + DEVTOOLS SHORTCUTS
-        ------------------------------------------------- */
-
         if (
             event.ctrlKey &&
             event.shiftKey &&
@@ -2629,10 +2454,6 @@ document.addEventListener(
         }
 
 
-        /* -------------------------------------------------
-           BLOCK F12
-        ------------------------------------------------- */
-
         if (event.key === "F12") {
 
             event.preventDefault();
@@ -2642,16 +2463,11 @@ document.addEventListener(
         }
 
 
-        /* -------------------------------------------------
-           ARROW NAVIGATION
-        ------------------------------------------------- */
-
         if (event.key === "ArrowRight") {
 
             event.preventDefault();
 
             goToNextQuestion();
-
         }
 
 
@@ -2660,9 +2476,7 @@ document.addEventListener(
             event.preventDefault();
 
             goToPreviousQuestion();
-
         }
-
     }
 );
 
@@ -2678,9 +2492,7 @@ document.addEventListener(
         if (isExamRunning()) {
 
             event.preventDefault();
-
         }
-
     }
 );
 
@@ -2696,9 +2508,7 @@ document.addEventListener(
         if (isExamRunning()) {
 
             event.preventDefault();
-
         }
-
     }
 );
 
@@ -2714,9 +2524,7 @@ document.addEventListener(
         if (isExamRunning()) {
 
             event.preventDefault();
-
         }
-
     }
 );
 
@@ -2732,9 +2540,7 @@ document.addEventListener(
         if (isExamRunning()) {
 
             event.preventDefault();
-
         }
-
     }
 );
 
@@ -2750,9 +2556,7 @@ document.addEventListener(
         if (isExamRunning()) {
 
             event.preventDefault();
-
         }
-
     }
 );
 
@@ -2768,9 +2572,7 @@ document.addEventListener(
         if (isExamRunning()) {
 
             event.preventDefault();
-
         }
-
     }
 );
 
@@ -2811,9 +2613,7 @@ window.addEventListener(
         ) {
 
             handleExamBackButton();
-
         }
-
     }
 );
 
@@ -2831,9 +2631,7 @@ window.addEventListener(
             event.preventDefault();
 
             event.returnValue = "";
-
         }
-
     }
 );
 
@@ -2859,9 +2657,7 @@ document.addEventListener(
         );
 
 
-        /* -------------------------------------------------
-           HOME → LOGIN
-        ------------------------------------------------- */
+        /* HOME → LOGIN */
 
         const startHomeBtn =
             get("startHomeBtn");
@@ -2883,18 +2679,13 @@ document.addEventListener(
                     if (studentInput) {
 
                         studentInput.focus();
-
                     }
-
                 }
             );
-
         }
 
 
-        /* -------------------------------------------------
-           START EXAM
-        ------------------------------------------------- */
+        /* START EXAM */
 
         const startExamBtn =
             get("startExamBtn");
@@ -2906,13 +2697,10 @@ document.addEventListener(
                 "click",
                 startExam
             );
-
         }
 
 
-        /* -------------------------------------------------
-           PASSWORD ENTER
-        ------------------------------------------------- */
+        /* PASSWORD ENTER */
 
         const examPassword =
             get("examPassword");
@@ -2927,18 +2715,13 @@ document.addEventListener(
                     if (event.key === "Enter") {
 
                         startExam();
-
                     }
-
                 }
             );
-
         }
 
 
-        /* -------------------------------------------------
-           STUDENT NAME ENTER
-        ------------------------------------------------- */
+        /* STUDENT NAME ENTER */
 
         const studentInput =
             get("studentName");
@@ -2959,20 +2742,14 @@ document.addEventListener(
                         if (password) {
 
                             password.focus();
-
                         }
-
                     }
-
                 }
             );
-
         }
 
 
-        /* -------------------------------------------------
-           PREVIOUS
-        ------------------------------------------------- */
+        /* PREVIOUS */
 
         const previousBtn =
             get("previousBtn");
@@ -2984,13 +2761,10 @@ document.addEventListener(
                 "click",
                 goToPreviousQuestion
             );
-
         }
 
 
-        /* -------------------------------------------------
-           NEXT
-        ------------------------------------------------- */
+        /* NEXT */
 
         const nextBtn =
             get("nextBtn");
@@ -3002,13 +2776,10 @@ document.addEventListener(
                 "click",
                 goToNextQuestion
             );
-
         }
 
 
-        /* -------------------------------------------------
-           REVIEW
-        ------------------------------------------------- */
+        /* REVIEW */
 
         const reviewBtn =
             get("reviewBtn");
@@ -3020,13 +2791,10 @@ document.addEventListener(
                 "click",
                 toggleReview
             );
-
         }
 
 
-        /* -------------------------------------------------
-           CLEAR
-        ------------------------------------------------- */
+        /* CLEAR */
 
         const clearBtn =
             get("clearBtn");
@@ -3038,13 +2806,10 @@ document.addEventListener(
                 "click",
                 clearCurrentAnswer
             );
-
         }
 
 
-        /* -------------------------------------------------
-           OPEN PALETTE
-        ------------------------------------------------- */
+        /* OPEN PALETTE */
 
         const openPaletteBtn =
             get("openPaletteBtn");
@@ -3056,13 +2821,10 @@ document.addEventListener(
                 "click",
                 openPalette
             );
-
         }
 
 
-        /* -------------------------------------------------
-           CLOSE PALETTE
-        ------------------------------------------------- */
+        /* CLOSE PALETTE */
 
         const closePaletteBtn =
             get("closePaletteBtn");
@@ -3074,13 +2836,10 @@ document.addEventListener(
                 "click",
                 closePalette
             );
-
         }
 
 
-        /* -------------------------------------------------
-           PALETTE OVERLAY
-        ------------------------------------------------- */
+        /* PALETTE OVERLAY */
 
         const paletteOverlay =
             get("paletteOverlay");
@@ -3092,13 +2851,10 @@ document.addEventListener(
                 "click",
                 closePalette
             );
-
         }
 
 
-        /* -------------------------------------------------
-           SUBMIT
-        ------------------------------------------------- */
+        /* SUBMIT */
 
         const submitBtn =
             get("submitBtn");
@@ -3110,13 +2866,10 @@ document.addEventListener(
                 "click",
                 openSubmitModal
             );
-
         }
 
 
-        /* -------------------------------------------------
-           CONFIRM SUBMIT
-        ------------------------------------------------- */
+        /* CONFIRM SUBMIT */
 
         const confirmSubmitBtn =
             get("confirmSubmitBtn");
@@ -3128,13 +2881,10 @@ document.addEventListener(
                 "click",
                 confirmSubmission
             );
-
         }
 
 
-        /* -------------------------------------------------
-           CANCEL SUBMIT
-        ------------------------------------------------- */
+        /* CANCEL SUBMIT */
 
         const cancelSubmitBtn =
             get("cancelSubmitBtn");
@@ -3146,13 +2896,10 @@ document.addEventListener(
                 "click",
                 closeSubmitModal
             );
-
         }
 
 
-        /* -------------------------------------------------
-           FULLSCREEN
-        ------------------------------------------------- */
+        /* FULLSCREEN */
 
         const fullscreenBtn =
             get("fullscreenBtn");
@@ -3164,7 +2911,6 @@ document.addEventListener(
                 "click",
                 enterFullscreen
             );
-
         }
 
     }
